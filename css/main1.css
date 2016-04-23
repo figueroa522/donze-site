@@ -1,0 +1,106 @@
+html, body{
+	height: 100%;
+	width: 100%;
+	background-color: #00001a;
+	margin: 0;
+	padding: 0;
+}
+*{
+	box-sizing: border-box;
+}
+.none{
+	display: none;
+}
+.header{
+	height: 100px;
+	width: 100%;
+	display: inline-block;
+}
+.header-icon{
+	height: 80px;
+	width: 80px;
+	position: absolute;
+	top: 20;
+	left: 100;
+	z-index: 35;
+}
+.header-icon img{
+	height: 100%;
+	width: 100%;
+}
+.top-nav-bar{
+	height: 100px;
+	width: 100%;
+	background-color: #222;
+	color:  #cca300;
+	z-index: 1;
+}
+.about-nav-bar{
+	height: 50px;
+	width: 20%;
+	border-left: 1px solid #cca300;
+	float: right;
+	margin-top: 50px;
+	padding: 8px;
+}
+.about-nav-bar:hover {
+	background-color: #444;
+	font-size: 23px;
+	cursor: pointer;
+}
+.contact-nav-bar{
+	height: 50px;
+	width: 20%;
+	border-left: 1px solid #cca300;
+	float: right;
+	margin-top: 50px;
+	padding: 8px;	
+}
+.contact-nav-bar:hover {
+	background-color: #444;
+	font-size: 23px;
+	cursor: pointer;
+}
+.experience-nav-bar{
+	height: 50px;
+	width: 20%;
+	float: right;
+	border-left: 1px solid #cca300;
+	margin-top: 50px;
+	padding: 8px;	
+}
+.experience-nav-bar:hover {
+	background-color: #444;
+	font-size: 23px;
+	cursor: pointer;
+}
+.container{
+	height: 600px;
+	width: 70%;
+	position: absolute;
+	top: 110px;
+	left: 14%;
+	padding: 0;
+}
+.img-container{
+	height: 600px;
+	width:100%;
+	position: absolute;
+	top: 0px;
+	left: 0;
+	z-index: 0;
+	padding: 0;
+}
+.img-container img{
+	height: 100%;
+	width: 100%;
+}
+.audio-select{
+	height: 100%;
+	width:100%;
+	position: absolute;
+	top: 0;
+	left: 45;
+	z-index: 40;
+	display: inline-block;
+}
