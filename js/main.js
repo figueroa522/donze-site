@@ -47,33 +47,48 @@ $('.model-list').on('change', function(data){
 	var url = $(this).find(':checked').attr('url');
 
 })
-
-$('.stereo-select').on('click', function(e){
+$('.stereo-tab').on('click', function(e){
 	$('.stereo-list-menu').removeClass('none');
 	doSearch('car stereo', 'stereoApiCallback', 15);
 	
 })
 $('.stereo-list-menu').on('change', function(e){
 	var url = $(this).find(':checked').attr('url');
-	$('.stereoDisplay img')[0].src= url;
+	$('.itemDisplay img')[0].src= url;
 })
 
-$('.speakers-select').on('click', function(e){
+$('.speakers-tab').on('click', function(e){
 	$('.speakers-list-menu').removeClass('none');
 	doSearch('car speakers', 'speakersApiCallback', 15);
 })
 $('.speakers-list-menu').on('change', function(e){
 	var url = $(this).find(':checked').attr('url');
-	$('.speakerDisplay img')[0].src= url;
+	$('.itemDisplay img')[0].src= url;
+})
+$('.subwoofers-tab').on('click', function(e){
+	$('.subwoofers-list-menu').removeClass('none');
+	doSearch('car subwoofers', 'subwoofersApiCallback', 15);
+})
+$('.subwoofers-list-menu').on('change', function(e){
+	var url = $(this).find(':checked').attr('url');
+	$('.itemDisplay img')[0].src= url;
+})
+$('.speakers-tab').on('click', function(e){
+	$('.speakers-list-menu').removeClass('none');
+	doSearch('car speakers', 'speakersApiCallback', 15);
+})
+$('.speakers-list-menu').on('change', function(e){
+	var url = $(this).find(':checked').attr('url');
+	$('.itemDisplay img')[0].src= url;
 })
 
-$('.amps-select').on('click', function(e){
+$('.amps-tab').on('click', function(e){
 	$('.amps-list-menu').removeClass('none');
 	doSearch('car amps', 'ampApiCallback', 15);
 })
 $('.amps-list-menu').on('change', function(e){
 	var url = $(this).find(':checked').attr('url');
-	$('.ampDisplay img')[0].src= url;
+	$('.itemDisplay img')[0].src= url;
 })
 //this function is a different api call thru ebay. in this api call we are getting car stereo images and other data ie: name, price
 function doSearch(keywords, callback, pagination){

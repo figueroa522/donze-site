@@ -14,15 +14,15 @@ html, body{
 .header{
 	height: 100px;
 	width: 100%;
-	display: inline-block;
 }
 .header-icon{
 	height: 80px;
 	width: 80px;
 	position: absolute;
 	top: 20;
-	left: 100;
+	left: 200;
 	z-index: 35;
+	margin-left: 75px;
 }
 .header-icon img{
 	height: 100%;
@@ -82,25 +82,89 @@ html, body{
 	left: 14%;
 	padding: 0;
 }
-.img-container{
-	height: 600px;
-	width:100%;
-	position: absolute;
-	top: 0px;
-	left: 0;
-	z-index: 0;
-	padding: 0;
+.img-container {
+    height: 550px;
+    width: 152%;
+    background-image: url("../img/stang.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin-left: -24%;
+    margin-top: -10px;
 }
-.img-container img{
+.audio-select{
+	height: 200px;
+	width:100%;
+	margin-left: 14%;
+	background-color: #333;
+	padding: 20px;
+}
+.tabs{
+	height: 40px;
+	width: 100%;
+	margin-top: -10%;
+	margin-left: 14%;
+	color: #cca300;
+	padding: 0;
+	cursor: pointer;
+}
+.stereo-tab{
+	height: 100%;
+	width: 125px;
+	background-color: #333;
+	float: left;
+	border-top-right-radius: 3em;
+	padding: 10px;
+}
+.speakers-tab{
+	height: 100%;
+	width: 125px;
+	background-color: #333;
+	float: left;
+	border-top-right-radius: 3em;
+	padding: 10px;
+}
+.subwoofers-tab{
+	height: 100%;
+	width: 125px;
+	background-color: #333;
+	float: left;
+	border-top-right-radius: 3em;
+	padding: 10px;
+}
+.amps-tab{
+	height: 100%;
+	width: 125px;
+	background-color: #333;
+	float: left;
+	border-top-right-radius: 3em;
+	padding: 10px;
+}
+.item-display-box{
+	height: 90%;
+	width: 45%;
+	padding: 10px;
+	background-color: white;
+	margin-top: 5px;
+}
+.itemDisplay{
 	height: 100%;
 	width: 100%;
 }
-.audio-select{
-	height: 100%;
-	width:100%;
-	position: absolute;
-	top: 0;
-	left: 45;
-	z-index: 40;
-	display: inline-block;
+.titleDisplay{
+	height: 90%;
+	width: 54%;
+	padding: 4%;
+}
+.stereo-list{
+	float:right
+}
+.speakers-list{
+	float:right
+}
+.subwoofers-list{
+	float: right;
+}
+.amps-list{
+	float:right
 }

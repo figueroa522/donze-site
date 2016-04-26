@@ -22,28 +22,36 @@
 	</div>
 	<div class="container">
 		<div class="img-container">
-			<img src="img/stang.jpg"></img>
 		</div>
-		<div class="audio-select">
-			<div class="stereo-list">
-				<input type="button" value="stereo type" class="stereo-select"></input>
+		<div class="tabs">
+			<div class="stereo-tab">Stereo's
+				<div class="stereo-select"></div>
 				<select class="stereo-list-menu none">
 					<option>Select Stereo</option>
 				</select>
 			</div>
-			<div class="speakers-list">
-				<input type="button" value="speakers type" class="speakers-select"></input>
+			<div class="speakers-tab">Speakers
+				<div class="speakers-select"></div>
 				<select class="speakers-list-menu none">
 					<option>Select Speakers</option>
 				</select>
 			</div>
-			<div class="amps-list">
-				<input type="button" value="amps type" class="amps-select"></input>
+			<div class="subwoofers-tab">Subwoofer's
+				<div class="subwoofers-select"></div>
+				<select class="subwoofers-list-menu none">
+					<option>Select subwoofers</option>
+				</select>
+			</div>
+			<div class="amps-tab">Amps
+				<div class="amps-select"></div>
 				<select class="amps-list-menu none">
 					<option>Select Amps</option>
 				</select>
 			</div>
 		</div>
+		<div class="audio-select">
+			<div class="item-display-box"><img class="itemDisplay" src=""></div>
+			<div class="titleDisplay"></div>
 		</div>			
 	</div>
 	<script type="text/javascript" src="js/main.js"></script>
