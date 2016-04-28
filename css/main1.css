@@ -110,7 +110,7 @@ html, body{
 }
 .stereo-tab{
 	height: 100%;
-	width: 125px;
+	width: 175px;
 	background-color: #333;
 	float: left;
 	border-top-right-radius: 3em;
@@ -118,7 +118,7 @@ html, body{
 }
 .speakers-tab{
 	height: 100%;
-	width: 125px;
+	width: 175px;
 	background-color: #333;
 	float: left;
 	border-top-right-radius: 3em;
@@ -126,7 +126,7 @@ html, body{
 }
 .subwoofers-tab{
 	height: 100%;
-	width: 125px;
+	width: 175px;
 	background-color: #333;
 	float: left;
 	border-top-right-radius: 3em;
@@ -134,7 +134,7 @@ html, body{
 }
 .amps-tab{
 	height: 100%;
-	width: 125px;
+	width: 175px;
 	background-color: #333;
 	float: left;
 	border-top-right-radius: 3em;
@@ -146,6 +146,7 @@ html, body{
 	padding: 10px;
 	background-color: white;
 	margin-top: 5px;
+	border-right: 1px solid #cca300;
 }
 .itemDisplay{
 	height: 100%;
@@ -155,6 +156,7 @@ html, body{
 	height: 90%;
 	width: 54%;
 	padding: 4%;
+	color: white;
 }
 .stereo-list{
 	float:right

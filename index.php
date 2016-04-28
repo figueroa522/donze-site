@@ -50,7 +50,7 @@
 			</div>
 		</div>
 		<div class="audio-select">
-			<div class="item-display-box"><img class="itemDisplay" src=""></div>
+			<div class="item-display-box"><img class="itemDisplay" src="#"></div>
 			<div class="titleDisplay"></div>
 		</div>			
 	</div>

@@ -54,7 +54,7 @@ $('.stereo-tab').on('click', function(e){
 })
 $('.stereo-list-menu').on('change', function(e){
 	var url = $(this).find(':checked').attr('url');
-	$('.itemDisplay img')[0].src= url;
+	$('.itemDisplay').attr('src', url);
 })
 
 $('.speakers-tab').on('click', function(e){
@@ -63,7 +63,7 @@ $('.speakers-tab').on('click', function(e){
 })
 $('.speakers-list-menu').on('change', function(e){
 	var url = $(this).find(':checked').attr('url');
-	$('.itemDisplay img')[0].src= url;
+	$('.itemDisplay').attr('src', url);
 })
 $('.subwoofers-tab').on('click', function(e){
 	$('.subwoofers-list-menu').removeClass('none');
@@ -71,7 +71,7 @@ $('.subwoofers-tab').on('click', function(e){
 })
 $('.subwoofers-list-menu').on('change', function(e){
 	var url = $(this).find(':checked').attr('url');
-	$('.itemDisplay img')[0].src= url;
+	$('.itemDisplay').attr('src', url);
 })
 $('.speakers-tab').on('click', function(e){
 	$('.speakers-list-menu').removeClass('none');
@@ -79,7 +79,7 @@ $('.speakers-tab').on('click', function(e){
 })
 $('.speakers-list-menu').on('change', function(e){
 	var url = $(this).find(':checked').attr('url');
-	$('.itemDisplay img')[0].src= url;
+	$('.itemDisplay').attr('src', url);
 })
 
 $('.amps-tab').on('click', function(e){
@@ -88,7 +88,7 @@ $('.amps-tab').on('click', function(e){
 })
 $('.amps-list-menu').on('change', function(e){
 	var url = $(this).find(':checked').attr('url');
-	$('.itemDisplay img')[0].src= url;
+	$('.itemDisplay').attr('src', url);
 })
 //this function is a different api call thru ebay. in this api call we are getting car stereo images and other data ie: name, price
 function doSearch(keywords, callback, pagination){
@@ -117,7 +117,6 @@ function makeModelApiCallback(data){
 }
 function stereoApiCallback(data){
 	objApiCallback(data, 'stereo-list-menu');
-	console.log(data);
 }
 function speakersApiCallback(data){
 	objApiCallback(data, 'speakers-list-menu');
@@ -128,7 +127,6 @@ function ampApiCallback(data){
 
 function apiCallBack(data){
 	var items = data.findItemsByKeywordsResponse[0].searchResult[0].item;
-	console.log(items);
 	for(var i = 0; i < items.length; i++){
 		putIn = items[i].galleryURL[0];
 
@@ -160,6 +158,8 @@ function objApiCallback(data, classname){
 		pic = items[i].galleryURL[0];
 		titles = items[i].title[0].split(' ').splice(0,3).join('') + ('...');
 		list = $('<option>',{text : titles, url : pic});
-		$('.' + classname).append(list);
+
+		$('.itemDisplay').attr('url', pic);
+		$('.titleDisplay').html(titles);
 	}	
 }
