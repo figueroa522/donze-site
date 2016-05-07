@@ -54,7 +54,7 @@ $('.stereo-tab').on('click', function(e){
 })
 $('.stereo-list-menu').on('change', function(e){
 	var url = $(this).find(':checked').attr('url');
-	$('.itemDisplay').append($('<img>'),{'src', url});
+	$('.itemDisplay').append($('<img>'),{'src' : url});
 })
 
 $('.speakers-tab').on('click', function(e){
@@ -152,13 +152,13 @@ function objApiCallback(data, className){
 	for(var i = 0; i < items.length; i++){
 		//pic = items[i].galleryURL[0];
 		titles = items[i].title[0].split(' ').splice(0,2).join('') + ('...');
-		option = $('<option/>');
+		option = $('<option>');
 		list = option.html(titles);
 		pic = list.attr('src');
 
 		$('.' + className).append(list);
 	}	
-		
+
 		// $('.itemDisplay').append('<img>').attr('src', pic);
 		// $('.titleDisplay').html(titles);
 }
