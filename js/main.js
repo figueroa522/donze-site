@@ -159,6 +159,6 @@ function objApiCallback(data, className){
 		$('.' + className).append(list);
 	}	
 
-		// $('.itemDisplay').append('<img>').attr('src', pic);
-		// $('.titleDisplay').html(titles);
+		$('.itemDisplay').append('<img>').attr('src', pic);
+		$('.titleDisplay').html(titles);
 }
