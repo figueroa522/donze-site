@@ -54,7 +54,7 @@ $('.stereo-tab').on('click', function(e){
 })
 $('.stereo-list-menu').on('change', function(e){
 	var url = $(this).find(':checked').attr('url');
-	$('.itemDisplay').attr('src', url);
+	$('.itemDisplay').append($('<img>'),{'src', url});
 })
 
 $('.speakers-tab').on('click', function(e){
@@ -63,21 +63,13 @@ $('.speakers-tab').on('click', function(e){
 })
 $('.speakers-list-menu').on('change', function(e){
 	var url = $(this).find(':checked').attr('url');
-	$('.itemDisplay').attr('src', url);
+	$('.itemDisplay').append('<img>',{src : url});
 })
 $('.subwoofers-tab').on('click', function(e){
 	$('.subwoofers-list-menu').removeClass('none');
 	doSearch('car subwoofers', 'subwoofersApiCallback', 15);
 })
 $('.subwoofers-list-menu').on('change', function(e){
-	var url = $(this).find(':checked').attr('url');
-	$('.itemDisplay').attr('src', url);
-})
-$('.speakers-tab').on('click', function(e){
-	$('.speakers-list-menu').removeClass('none');
-	doSearch('car speakers', 'speakersApiCallback', 15);
-})
-$('.speakers-list-menu').on('change', function(e){
 	var url = $(this).find(':checked').attr('url');
 	$('.itemDisplay').attr('src', url);
 })
@@ -124,6 +116,9 @@ function speakersApiCallback(data){
 function ampApiCallback(data){
 	objApiCallback(data, 'amps-list-menu');
 }
+function subwoofersApiCallback(data){
+	objApiCallback(data, 'subwoofers-list-menu');
+}
 
 function apiCallBack(data){
 	var items = data.findItemsByKeywordsResponse[0].searchResult[0].item;
@@ -150,16 +145,19 @@ function parseDataBuildSelect(data, dataKey, className){
 	}
 }
 
-function objApiCallback(data, classname){
+function objApiCallback(data, className){
 	var items = data.findItemsByKeywordsResponse[0].searchResult[0].item,
 	pic, titles, list;
-
+	console.log(data);
 	for(var i = 0; i < items.length; i++){
-		pic = items[i].galleryURL[0];
-		titles = items[i].title[0].split(' ').splice(0,3).join('') + ('...');
-		list = $('<option>',{text : titles, url : pic});
+		//pic = items[i].galleryURL[0];
+		titles = items[i].title[0].split(' ').splice(0,2).join('') + ('...');
+		option = $('<option/>');
+		list = option.html(titles);
+		pic = list.attr('src');
 
-		$('.itemDisplay').attr('url', pic);
-		$('.titleDisplay').html(titles);
+		$('.' + className).append(list);
 	}	
+		$('.itemDisplay').append('<img>').attr('src', pic);
+		$('.titleDisplay').html(titles);
 }

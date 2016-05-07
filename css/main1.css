@@ -140,23 +140,21 @@ html, body{
 	border-top-right-radius: 3em;
 	padding: 10px;
 }
-.item-display-box{
+.itemDisplay{
 	height: 90%;
-	width: 45%;
+	width: 40%;
 	padding: 10px;
 	background-color: white;
 	margin-top: 5px;
 	border-right: 1px solid #cca300;
-}
-.itemDisplay{
-	height: 100%;
-	width: 100%;
 }
 .titleDisplay{
 	height: 90%;
 	width: 54%;
 	padding: 4%;
 	color: white;
+	float: right;
+	margin-top: -144px;
 }
 .stereo-list{
 	float:right
