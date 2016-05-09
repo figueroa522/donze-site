@@ -150,7 +150,7 @@ function objApiCallback(data, className){
 		$('.' + className).append(list);
 	}	
 
-		$('.itemDisplay').append('<img>').attr('src', pic);
+		$('.itemDisplay').append('<img>', { src : pic});
 		$('.titleDisplay').html(titles);
 		console.log(pic);
 }
