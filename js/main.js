@@ -54,7 +54,8 @@ $('.stereo-tab').on('click', function(e){
 })
 $('.stereo-list-menu').on('change', function(e){
 	var url = $(this).find(':checked').attr('url');
-	$('.itemDisplay').append($('<img>'),{'src' : url});
+	console.log(url);
+	$('.itemDisplay').append($('<img>'),{src : url});
 })
 
 $('.speakers-tab').on('click', function(e){
@@ -152,5 +153,4 @@ function objApiCallback(data, className){
 
 		$('.itemDisplay').append('<img>', { src : pic});
 		$('.titleDisplay').html(titles);
-		console.log(pic);
 }
