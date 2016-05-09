@@ -152,4 +152,5 @@ function objApiCallback(data, className){
 
 		$('.itemDisplay').append('<img>').attr('src', pic);
 		$('.titleDisplay').html(titles);
+		console.log(pic);
 }
