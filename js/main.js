@@ -120,13 +120,7 @@ function subwoofersApiCallback(data){
 	objApiCallback(data, 'subwoofers-list-menu');
 }
 
-function apiCallBack(data){
-	var items = data.findItemsByKeywordsResponse[0].searchResult[0].item;
-	for(var i = 0; i < items.length; i++){
-		putIn = items[i].galleryURL[0];
 
-	}
-}
 
 // this is basically a stencil for filtering
 // through the api to retrieve makes and models. the code for both is pretty much the same so
@@ -148,13 +142,10 @@ function parseDataBuildSelect(data, dataKey, className){
 function objApiCallback(data, className){
 	var items = data.findItemsByKeywordsResponse[0].searchResult[0].item,
 	pic, titles, list;
-	console.log(data);
 	for(var i = 0; i < items.length; i++){
-		//pic = items[i].galleryURL[0];
-		titles = items[i].title[0].split(' ').splice(0,2).join('') + ('...');
-		option = $('<option>');
-		list = option.html(titles);
 		pic = items[i].galleryURL[0];
+		titles = items[i].title[0].split(' ').splice(0,2).join('') + ('...');
+		list = $('<option>', { text : titles, url : pic});
 
 		$('.' + className).append(list);
 	}	
