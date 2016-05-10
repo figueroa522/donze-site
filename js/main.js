@@ -53,9 +53,10 @@ $('.stereo-tab').on('click', function(e){
 	
 })
 $('.stereo-list-menu').on('change', function(e){
-	var url = $(this).find(':checked').attr('url');
+	var url = $(this).find(':selected').attr('url');
 	console.log(url);
 	$('.itemDisplay').append($('<img>'),{src : url});
+
 })
 
 $('.speakers-tab').on('click', function(e){
@@ -63,7 +64,7 @@ $('.speakers-tab').on('click', function(e){
 	doSearch('car speakers', 'speakersApiCallback', 15);
 })
 $('.speakers-list-menu').on('change', function(e){
-	var url = $(this).find(':checked').attr('url');
+	var url = $(this).find(':selected').attr('url');
 	$('.itemDisplay').append('<img>',{src : url});
 })
 $('.subwoofers-tab').on('click', function(e){
@@ -71,7 +72,7 @@ $('.subwoofers-tab').on('click', function(e){
 	doSearch('car subwoofers', 'subwoofersApiCallback', 15);
 })
 $('.subwoofers-list-menu').on('change', function(e){
-	var url = $(this).find(':checked').attr('url');
+	var url = $(this).find(':selected').attr('url');
 	$('.itemDisplay').attr('src', url);
 })
 
@@ -151,6 +152,6 @@ function objApiCallback(data, className){
 		$('.' + className).append(list);
 	}	
 
-		$('.itemDisplay').append('<img>', { src : pic});
+		//$('.itemDisplay').append('<img>', { src : pic});
 		$('.titleDisplay').html(titles);
 }
