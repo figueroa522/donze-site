@@ -53,9 +53,9 @@ $('.stereo-tab').on('click', function(e){
 	
 })
 $('.stereo-list-menu').on('change', function(e){
+	$('.itemDisplay img').attr('src', '#');
 	var url = $(this).find(':selected').attr('url');
 	var title = $(this).find(':selected').attr('text');
-	
 	$('.itemDisplay img').attr('src', url);
 	$('.titleDisplay').html(title);
 })
@@ -65,6 +65,7 @@ $('.speakers-tab').on('click', function(e){
 	doSearch('car speakers', 'speakersApiCallback', 15);
 })
 $('.speakers-list-menu').on('change', function(e){
+	$('.itemDisplay img').attr('src', '#');
 	var url = $(this).find(':selected').attr('url');
 	var title = $(this).find(':selected').attr('text');
 	
@@ -76,6 +77,7 @@ $('.subwoofers-tab').on('click', function(e){
 	doSearch('car subwoofers', 'subwoofersApiCallback', 15);
 })
 $('.subwoofers-list-menu').on('change', function(e){
+	$('.itemDisplay img').attr('src', '#');
 	var url = $(this).find(':selected').attr('url');
 	var title = $(this).find(':selected').attr('text');
 	
@@ -88,6 +90,7 @@ $('.amps-tab').on('click', function(e){
 	doSearch('car amps', 'ampApiCallback', 15);
 })
 $('.amps-list-menu').on('change', function(e){
+	$('.itemDisplay img').attr('src', '#');
 	var url = $(this).find(':selected').attr('url');
 	var title = $(this).find(':selected').attr('text');
 	
