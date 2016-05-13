@@ -68,7 +68,7 @@ $('.speakers-list-menu').on('change', function(e){
 	var url = $(this).find(':selected').attr('url');
 	var title = $(this).find(':selected').attr('text');
 	
-	$('.itemDisplay').append($('<img>',{'src' : url}));
+	$('.itemDisplay img').attr('src', url);
 	$('.titleDisplay').html(title);
 })
 $('.subwoofers-tab').on('click', function(e){
@@ -79,7 +79,7 @@ $('.subwoofers-list-menu').on('change', function(e){
 	var url = $(this).find(':selected').attr('url');
 	var title = $(this).find(':selected').attr('text');
 	
-	$('.itemDisplay').append($('<img>',{'src' : url}));
+	$('.itemDisplay img').attr('src', url);
 	$('.titleDisplay').html(title);
 })
 
@@ -91,7 +91,7 @@ $('.amps-list-menu').on('change', function(e){
 	var url = $(this).find(':selected').attr('url');
 	var title = $(this).find(':selected').attr('text');
 	
-	$('.itemDisplay').append($('<img>',{'src' : url}));
+	$('.itemDisplay img').attr('src', url);
 	$('.titleDisplay').html(title);
 })
 //this function is a different api call thru ebay. in this api call we are getting car stereo images and other data ie: name, price
