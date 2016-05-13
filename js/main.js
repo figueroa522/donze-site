@@ -66,7 +66,10 @@ $('.speakers-tab').on('click', function(e){
 })
 $('.speakers-list-menu').on('change', function(e){
 	var url = $(this).find(':selected').attr('url');
-	$('.itemDisplay').append('<img>',{src : url});
+	var title = $(this).find(':selected').attr('text');
+	console.log(url);
+	$('.itemDisplay').append($('<img>',{'src' : url}));
+	$('.titleDisplay').html(title);
 })
 $('.subwoofers-tab').on('click', function(e){
 	$('.subwoofers-list-menu').removeClass('none');
@@ -74,7 +77,10 @@ $('.subwoofers-tab').on('click', function(e){
 })
 $('.subwoofers-list-menu').on('change', function(e){
 	var url = $(this).find(':selected').attr('url');
-	$('.itemDisplay').attr('src', url);
+	var title = $(this).find(':selected').attr('text');
+	console.log(url);
+	$('.itemDisplay').append($('<img>',{'src' : url}));
+	$('.titleDisplay').html(title);
 })
 
 $('.amps-tab').on('click', function(e){
@@ -82,8 +88,11 @@ $('.amps-tab').on('click', function(e){
 	doSearch('car amps', 'ampApiCallback', 15);
 })
 $('.amps-list-menu').on('change', function(e){
-	var url = $(this).find(':checked').attr('url');
-	$('.itemDisplay').attr('src', url);
+	var url = $(this).find(':selected').attr('url');
+	var title = $(this).find(':selected').attr('text');
+	console.log(url);
+	$('.itemDisplay').append($('<img>',{'src' : url}));
+	$('.titleDisplay').html(title);
 })
 //this function is a different api call thru ebay. in this api call we are getting car stereo images and other data ie: name, price
 function doSearch(keywords, callback, pagination){
