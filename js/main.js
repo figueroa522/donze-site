@@ -56,7 +56,7 @@ $('.stereo-list-menu').on('change', function(e){
 	var url = $(this).find(':selected').attr('url');
 	var title = $(this).find(':selected').attr('text');
 	console.log(url);
-	$('.itemDisplay').append($('<img>'),{'src' : url});
+	$('.itemDisplay').append($('<img>',{'src' : url}));
 	$('.titleDisplay').html(title);
 })
 
