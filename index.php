@@ -54,7 +54,7 @@
 			</div>
 		</div>
 		<div class="audio-select">
-			<div class="itemDisplay"></div>
+			<div class="itemDisplay"><img src="#"></div>
 			<div class="titleDisplay"></div>
 		</div>			
 	</div>
