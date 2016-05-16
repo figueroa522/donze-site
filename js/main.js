@@ -155,8 +155,9 @@ function objApiCallback(data, className){
 	pic, titles, list;
 	for(var i = 0; i < items.length; i++){
 		pic = items[i].galleryURL[0];
-		titles = items[i].title[0].split(' ').splice(0,2).join('') + ('...');
-		list = $('<option>', { text : titles, url : pic});
+		titles = items[i].title[0];
+		shortened = .split(' ').splice(0,2).join('') + ('...');
+		list = $('<option>', { text : titles.shortened, url : pic});
 
 		$('.' + className).append(list);
 	}	
