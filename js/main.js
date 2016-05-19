@@ -54,7 +54,7 @@ $('.stereo-tab').on('click', function(e){
 })
 $('.stereo-list-menu').on('change', function(e){
 	var url = $(this).find(':selected').attr('url');
-	var title = $(this).find(':selected').attr('text');
+	var title = $(this).find(':selected').attr('fullName');
 	$('.itemDisplay img').attr('src', url);
 	$('.titleDisplay').text(title);
 })
@@ -65,7 +65,7 @@ $('.speakers-tab').on('click', function(e){
 })
 $('.speakers-list-menu').on('change', function(e){
 	var url = $(this).find(':selected').attr('url');
-	var title = $(this).find(':selected').attr('text');
+	var title = $(this).find(':selected').attr('fullName');
 	
 	$('.itemDisplay img').attr('src', url);
 	$('.titleDisplay').text(title);
@@ -76,7 +76,7 @@ $('.subwoofers-tab').on('click', function(e){
 })
 $('.subwoofers-list-menu').on('change', function(e){
 	var url = $(this).find(':selected').attr('url');
-	var title = $(this).find(':selected').attr('text');
+	var title = $(this).find(':selected').attr('fullName');
 	
 	$('.itemDisplay img').attr('src', url);
 	$('.titleDisplay').text(title);
@@ -88,7 +88,7 @@ $('.amps-tab').on('click', function(e){
 })
 $('.amps-list-menu').on('change', function(e){
 	var url = $(this).find(':selected').attr('url');
-	var title = $(this).find(':selected').attr('text');
+	var title = $(this).find(':selected').attr('fullName');
 	
 	$('.itemDisplay img').attr('src', url);
 	$('.titleDisplay').text(title);
@@ -152,11 +152,12 @@ function parseDataBuildSelect(data, dataKey, className){
 
 function objApiCallback(data, className){
 	var items = data.findItemsByKeywordsResponse[0].searchResult[0].item,
-	pic, titles, list;
+	pic, titles, truncatedTitle, list;
 	for(var i = 0; i < items.length; i++){
 		pic = items[i].galleryURL[0];
-		titles = items[i].title[0].split(' ').splice(0,2).join('') + ('...');
-		list = $('<option>', { text : titles, url : pic});
+		title = items[i].title[0];
+		truncatedTitle = title.split(' ').splice(0,2).join('') + ('...');
+		list = $('<option>', { text : truncatedTitle, url : pic, fullName : title});
 
 		$('.' + className).append(list);
 	}	
