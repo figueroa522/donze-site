@@ -5,6 +5,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" type="text/css"/>
 		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
 	<?php include 'nav.php'; ?>
@@ -47,16 +48,16 @@
 			<div class="row">
 			  <div id="small-img" class="col-lg-12 center">
 			    <ul>
-			      <li>
+			      <li class="col-sm-3">
 			        <img src="http://placehold.it/150x100" class="img-responsive inline-block" alt="Responsive image" />
 			      </li>
-			      <li>
+			      <li class="col-sm-3">
 			        <img src="http://placehold.it/150x100" class="img-responsive inline-block" alt="Responsive image" />
 			      </li>
-			      <li>
+			      <li class="col-sm-3">
 			        <img src="http://placehold.it/150x100" class="img-responsive inline-block" alt="Responsive image" />
 			      </li>
-			      <li>
+			      <li class="col-sm-3">
 			        <img src="http://placehold.it/150x100" class="img-responsive inline-block" alt="Responsive image" />
 			      </li>
 			    </ul>
@@ -67,5 +68,7 @@
 	</div>
 
 	<script type="text/javascript" src="js/main.js"></script>
+
+	<?php include 'footer.php'; ?>
 </body>
 </html>
