@@ -46,20 +46,34 @@
 		<div class="imageText">
 			<div class="row">
 			  <div id="small-img" class="col-lg-12 center">
-			    <ul>
-			      <li>
-			        <img src="http://placehold.it/150x100" class="img-responsive inline-block" alt="Responsive image" />
-			      </li>
-			      <li>
-			        <img src="http://placehold.it/150x100" class="img-responsive inline-block" alt="Responsive image" />
-			      </li>
-			      <li>
-			        <img src="http://placehold.it/150x100" class="img-responsive inline-block" alt="Responsive image" />
-			      </li>
-			      <li>
-			        <img src="http://placehold.it/150x100" class="img-responsive inline-block" alt="Responsive image" />
-			      </li>
-			    </ul>
+				<div class="card col-sm-3">
+				  <img class="card-img-top" data-src="..." alt="Card image cap">
+				  <div class="card-block">
+				  	<h4 class="card-title">Card title</h4>
+				   	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  </div>
+				</div>
+				<div class="card col-sm-3">
+				  <img class="card-img-top" data-src="..." alt="Card image cap">
+				  <div class="card-block">
+				  	<h4 class="card-title">Card title</h4>
+				   	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  </div>
+				</div>
+				<div class="card col-sm-3">
+				  <img class="card-img-top" data-src="..." alt="Card image cap">
+				  <div class="card-block">
+				  	<h4 class="card-title">Card title</h4>
+				   	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  </div>
+				</div>
+				<div class="card col-sm-3">
+				  <img class="card-img-top" data-src="..." alt="Card image cap">
+				  <div class="card-block">
+				  	<h4 class="card-title">Card title</h4>
+				   	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  </div>
+				</div>			 
 			  </div>
 		</div>			
 		

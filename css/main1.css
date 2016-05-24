@@ -157,7 +157,8 @@ html, body{
 .amps-list{
 	float:right
 }
-.row li {
+/*.row li {
+  height: 200px;
   width: 25%;
   float: left;
 }
@@ -168,4 +169,7 @@ img {
   height: auto;
   max-width: 100%;
   vertical-align: middle;
+}*/
+.small-img{
+	height: 250px;
 }
