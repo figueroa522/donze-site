@@ -1,7 +1,12 @@
 //making global variables. they will be assigned later once the data from the api comes back
 var key =  "znu8wq3ksvf9qhnsaxkdh32w",
-	make,  model,  stereo,  speakers,  
-	amps,  items,  makeModel, putIn; //apiplus the key as a variable. this connects to a outside commercial server which has a list of cars.
+	make,  model,  items,  makeModel, putIn,
+	collection = {
+		stereo : false,
+		speakers : false,
+		subwoofers : false,
+		amps : false
+	}; //apiplus the key as a variable. this connects to a outside commercial server which has a list of cars.
 
 
 //the object the api returns is called data
@@ -39,7 +44,6 @@ $('.auto-list-menu').on('change', function () {
 
 //this gets fired when the select element with the class model-list-menu gets changed(like clicking on it)
 $('.model-list').on('change', function(data){
-
 	//this variable gets the model value of which ever model gets clicked. this is where the global vaiable model is assigned	
 	model = $(this).val();
 	makeModel = make + ' ' + model;
@@ -47,56 +51,46 @@ $('.model-list').on('change', function(data){
 	var url = $(this).find(':checked').attr('url');
 
 })
-$('.stereo-tab').on('click', function(e){
-	$('.stereo-list-menu').removeClass('none');
-	doSearch('car stereo', 'stereoApiCallback', 15);
-	
-})
-$('.stereo-list-menu').on('change', function(e){
-	var url = $(this).find(':selected').attr('url');
-	var title = $(this).find(':selected').attr('fullName');
-	$('.itemDisplay img').attr('src', url);
-	$('.titleDisplay').text(title);
-	$('.stereo-list-menu').addClass('none');
-})
 
-$('.speakers-tab').on('click', function(e){
-	$('.speakers-list-menu').removeClass('none');
-	doSearch('car speakers', 'speakersApiCallback', 15);
-})
-$('.speakers-list-menu').on('change', function(e){
+doSearch('car stereo', 'stereoApiCallback', 15);
+
+
+$('.tab').on('click', function() {
+	var apiName = $(this).attr('do-search');
+	$('.tab').removeClass('active');
+	$(this).addClass('active');
+	$('.tab-content').addClass('none')
+		.eq($(this).index()).removeClass('none');
+
+		console.log(window);
+	if(!collection[apiName]){
+		showLoader();
+		doSearch('car ' + apiName, apiName + 'ApiCallback', 15);
+	}else{
+		hideLoader();
+	}
+});
+
+function showLoader() {
+	$('.loader').removeClass('none');
+}
+
+function hideLoader() {
+	$('.loader').addClass('none');
+}
+
+
+$('.stereo-list-menu, .speakers-list-menu, .subwoofers-list-menu, .amps-list-menu')
+	.on('change', IzzyReallyFuckingSucks);
+
+function IzzyReallyFuckingSucks(e){
 	var url = $(this).find(':selected').attr('url');
 	var title = $(this).find(':selected').attr('fullName');
-	
 	$('.itemDisplay img').attr('src', url);
 	$('.titleDisplay').text(title);
 	$('.speakers-list-menu').addClass('none');
-})
-$('.subwoofers-tab').on('click', function(e){
-	$('.subwoofers-list-menu').removeClass('none');
-	doSearch('car subwoofers', 'subwoofersApiCallback', 15);
-})
-$('.subwoofers-list-menu').on('change', function(e){
-	var url = $(this).find(':selected').attr('url');
-	var title = $(this).find(':selected').attr('fullName');
-	
-	$('.itemDisplay img').attr('src', url);
-	$('.titleDisplay').text(title);
-	$('.subwoofers-list-menu').addClass('none');
-})
+}
 
-$('.amps-tab').on('click', function(e){
-	$('.amps-list-menu').removeClass('none');
-	doSearch('car amps', 'ampApiCallback', 15);
-})
-$('.amps-list-menu').on('change', function(e){
-	var url = $(this).find(':selected').attr('url');
-	var title = $(this).find(':selected').attr('fullName');
-	
-	$('.itemDisplay img').attr('src', url);
-	$('.titleDisplay').text(title);
-	$('.amps-list-menu').removeClass('none');
-})
 //this function is a different api call thru ebay. in this api call we are getting car stereo images and other data ie: name, price
 function doSearch(keywords, callback, pagination){
 	var url = "http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME=findItemsByKeywords" +
@@ -128,7 +122,7 @@ function stereoApiCallback(data){
 function speakersApiCallback(data){
 	objApiCallback(data, 'speakers-list-menu');
 }
-function ampApiCallback(data){
+function ampsApiCallback(data){
 	objApiCallback(data, 'amps-list-menu');
 }
 function subwoofersApiCallback(data){
@@ -157,6 +151,10 @@ function parseDataBuildSelect(data, dataKey, className){
 function objApiCallback(data, className){
 	var items = data.findItemsByKeywordsResponse[0].searchResult[0].item,
 	pic, titles, truncatedTitle, list;
+
+	hideLoader();
+	collection[className.split('-')[0]] = true;
+
 	for(var i = 0; i < items.length; i++){
 		pic = items[i].galleryURL[0];
 		title = items[i].title[0];

@@ -76,37 +76,23 @@ html, body{
 }
 .container{
 	height: 600px;
-	width: 70%;
-	position: absolute;
-	top: 110px;
-	left: 14%;
-	padding: 0;
 }
 .img-container {
     height: 550px;
-    width: 152%;
     background-image: url("../img/stang.jpg");
-    background-size: 100% 100%;
+    background-size: 100%;
     background-repeat: no-repeat;
+    background-position: 0;
     padding: 0;
-    margin-left: -24%;
-    margin-top: -10px;
 }
 .audio-select{
 	height: 200px;
 	width:100%;
-	margin-left: 14%;
 	background-color: #333;
 	padding: 20px;
 }
 .tabs{
 	height: 40px;
-	width: 100%;
-	margin-top: -10%;
-	margin-left: 14%;
-	color: #cca300;
-	padding: 0;
-	cursor: pointer;
 }
 .stereo-tab{
 	height: 100%;
@@ -170,4 +156,16 @@ html, body{
 }
 .amps-list{
 	float:right
+}
+.row li {
+  width: 25%;
+  float: left;
+}
+
+img {
+  border: 0 none;
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
 }

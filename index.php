@@ -3,61 +3,69 @@
 <head>
 	<title>The installation site</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/main1.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" type="text/css"/>
+		<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<div class="header">
-		<div class="header-icon"><img src="img/new4.jpg"></img></div>
-		<div class="top-nav-bar">
-			<div class="about-nav-bar">About
-				<select class="aboutD none"></select>			
-			</div>
-			<div class="contact-nav-bar"> Contact Us
-				<select class="contactD none"></select>			
-			</div>
-			<div class="experience-nav-bar">Experience
-				<select class="experienceD none"></select>			
-			</div>
-		</div>
-	</div>
+	<?php include 'nav.php'; ?>
 	<div class="container">
-		<div class="img-container">
-		</div>
-		<div class="tabs">
-			<div class="stereo-tab">Stereo's
-				<div class="stereo-select">
-					<select class="stereo-list-menu none">
+		
+		<div class="api-selection-area">
+			<div class="tabs">
+				<div class="tab active" do-search="stereo">Stereo's</div>
+				<div class="tab" do-search="speakers">Speakers</div>
+				<div class="tab" do-search="subwoofers">Subwoofer's</div>
+				<div class="tab" do-search="amps">Amps</div>
+			</div>
+			<div class="tab-content-area">
+				<div class="loader">
+					<img src="img/ajax.gif" alt="">
+				</div>
+				<div class="tab-content">
+					<select class="tab-select stereo-list-menu">
 						<option>Select Stereo</option>
 					</select>
 				</div>
-			</div>
-			<div class="speakers-tab">Speakers
-				<div class="speakers-select">
-					<select class="speakers-list-menu none">
+				<div class="tab-content none">
+					<select class="tab-select speakers-list-menu">
 						<option>Select Speakers</option>
 					</select>
 				</div>
-			</div>
-			<div class="subwoofers-tab">Subwoofer's
-				<div class="subwoofers-select">
-					<select class="subwoofers-list-menu none">
+				<div class="tab-content none">
+					<select class="tab-select subwoofers-list-menu">
 						<option>Select subwoofers</option>
 					</select>
 				</div>
-			</div>
-			<div class="amps-tab">Amps
-				<div class="amps-select">
-					<select class="amps-list-menu none">
+				<div class="tab-content none">
+					<select class="tab-select amps-list-menu">
 						<option>Select Amps</option>
 					</select>
 				</div>
 			</div>
 		</div>
-		<div class="audio-select">
-			<div class="itemDisplay"><img src="#"></div>
-			<div class="titleDisplay"></div>
+		<div class="imageText">
+			<div class="row">
+			  <div id="small-img" class="col-lg-12 center">
+			    <ul>
+			      <li>
+			        <img src="http://placehold.it/150x100" class="img-responsive inline-block" alt="Responsive image" />
+			      </li>
+			      <li>
+			        <img src="http://placehold.it/150x100" class="img-responsive inline-block" alt="Responsive image" />
+			      </li>
+			      <li>
+			        <img src="http://placehold.it/150x100" class="img-responsive inline-block" alt="Responsive image" />
+			      </li>
+			      <li>
+			        <img src="http://placehold.it/150x100" class="img-responsive inline-block" alt="Responsive image" />
+			      </li>
+			    </ul>
+			  </div>
 		</div>			
+		
+</div>
 	</div>
+
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
