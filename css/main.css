@@ -118,7 +118,7 @@ img{
 }
 .small-img{
     height: 300px;
-    padding:.5%;
+    padding:1%;
 }
 .card{
     height: 200px;
@@ -126,5 +126,5 @@ img{
     border: 1px solid black;
     border-radius: 14px;
     float: left;
-    padding: 4;
+    padding: 4px;
 }
