@@ -116,10 +116,15 @@ img{
 .footer .fa{
 	font-size: 25px;
 }
+.small-img{
+    height: 300px;
+    padding:.5%;
+}
 .card{
     height: 200px;
     width: 24%;
     border: 1px solid black;
     border-radius: 14px;
     float: left;
+    padding: 4;
 }
