@@ -173,6 +173,7 @@ img {
 	height: 250px;
 }
 .card{
+	height: 150px;
 	width: 24%;
 	border: 1px solid black;
 	float: left;

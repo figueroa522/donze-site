@@ -4,7 +4,7 @@
 	<title>The installation site</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" type="text/css"/>
-		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/main1.css">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -47,7 +47,6 @@
 		<div class="imageText">
 			<div class="row">
 			  <div id="small-img" class="col-lg-12 center">
-<<<<<<< HEAD
 				<div class="card">
 				  <img class="card-img-top" data-src="..." alt="Card image cap">
 				  <div class="card-block">
