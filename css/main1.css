@@ -141,7 +141,6 @@ html, body{
 	height: 90%;
 	width: 54%;
 	padding: 1%;
-	color: white;
 	float: right;
 	margin-top: -144px;
 }
@@ -172,4 +171,8 @@ img {
 }*/
 .small-img{
 	height: 250px;
+}
+.card{
+	width: 24%;
+	border: 1px solid black;
 }
