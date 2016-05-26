@@ -81,9 +81,9 @@ function hideLoader() {
 
 
 $('.stereo-list-menu, .speakers-list-menu, .subwoofers-list-menu, .amps-list-menu')
-	.on('change', IzzyReallyFuckingSucks);
+	.on('change', settingImageText);
 
-function IzzyReallyFuckingSucks(e){
+function settingImageText(e){
 	var url = $(this).find(':selected').attr('url');
 	var title = $(this).find(':selected').attr('fullName');
 	$('.itemDisplay img').attr('src', url);
