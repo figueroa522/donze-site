@@ -128,3 +128,8 @@ img{
     float: left;
     padding: 4px;
 }
+.card-img-top{
+    height: 38%;
+    padding: 1%;
+    border-bottom: 1px solid black;
+}
