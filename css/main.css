@@ -121,13 +121,13 @@ img{
     padding:1%;
 }
 .card{
-    height: 150px;
-    width: 13%;
+    height: 195px;
+    width: 17%;
     border: 1px solid black;
     border-radius: 14px;
     float: left;
-    padding: 4px;
-    margin-left: 116px;
+    padding: 10px;
+    margin-left: 6%;
     margin-top: 15px;
 }
 .card-img-top{
