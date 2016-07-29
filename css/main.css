@@ -5,7 +5,7 @@ body, html{
 }
 body{
 	background-image: url("../img/stang.jpg");
-	background-size: 100% 60%;
+	background-size: 100% 70%;
 	background-repeat: no-repeat;
 	background-position: top;
 	color:white;
@@ -121,15 +121,18 @@ img{
     padding:1%;
 }
 .card{
-    height: 200px;
-    width: 24%;
+    height: 150px;
+    width: 13%;
     border: 1px solid black;
     border-radius: 14px;
     float: left;
     padding: 4px;
+    margin-left: 116px;
+    margin-top: 15px;
 }
 .card-img-top{
-    height: 38%;
-    padding: 1%;
+    height: 64%;
+    width: 100%;
+    padding: 6%;
     border-bottom: 1px solid black;
 }
