@@ -161,7 +161,7 @@ function objApiCallback(data, className){
 		truncatedTitle = title.split(' ').splice(0,2).join('') + ('...');
 		list = $('<option>', { text : truncatedTitle, url : pic, fullName : title});
 
-		//$('.' + className).append(list);
+		$('.' + className).append(list);
 	}	
 
 		//$('.itemDisplay').append('<img>', { src : pic});
