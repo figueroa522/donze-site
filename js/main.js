@@ -168,6 +168,6 @@ function objApiCallback(data, className){
 		//$('.titleDisplay').html(titles);
 	var picdisplay = $('.card-img-top');
 	var textDisplay = $('.card-text');
-	picdisplay.attr(pic);
+	picdisplay.attr('src', pic);
 	textDisplay.html(title);
 }
