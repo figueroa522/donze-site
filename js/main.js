@@ -118,6 +118,9 @@ function makeModelApiCallback(data){
 }
 function stereoApiCallback(data){
 	objApiCallback(data, 'stereo-list-menu');
+	var url = $(this).find(':selected').attr('url');
+	var title = $(this).find(':selected').attr('title');
+	console.log(url);
 }
 function speakersApiCallback(data){
 	objApiCallback(data, 'speakers-list-menu');
@@ -164,10 +167,5 @@ function objApiCallback(data, className){
 		$('.' + className).append(list);
 	}	
 
-		//$('.itemDisplay').append('<img>', { src : pic});
-		//$('.titleDisplay').html(titles);
-	var picdisplay = $('.card-img-top');
-	var textDisplay = $('.card-text');
-	picdisplay.attr('src', pic);
-	textDisplay.html(title);
+	
 }
